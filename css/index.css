@@ -47,13 +47,22 @@ html {
 }
 
 .searchButton {
-    float: right;
     width: 60px;
     height: 45px;
     background: #fff url(../images/search.png) no-repeat center;
     background-size: 25px 25px;
     border-style: none;
     border-radius: 0 5px 5px 0;
+}
+
+.form-group {
+    display: flex;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.form-group svg {
+    height: 45px;
 }
 
 @media (min-width: 1304px) {
