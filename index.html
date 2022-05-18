@@ -7,27 +7,44 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>新建标签页</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet/less" type="text/css" href="./css/index.less"/>
     <link rel="shortcut icon" href="images/tab.png" type="image/x-icon">
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.33/vue.global.min.js"></script>
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.33/vue.global.js"></script>
+    <script>
+        less = {
+            env: "development",
+            async: false,
+            fileAsync: false,
+            poll: 1000,
+            functions: {},
+            dumpLineNumbers: "comments",
+            relativeUrls: false,
+            rootpath: ":/a.com/"
+        };
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/less.js/4.1.2/less.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
-<div class="root" id="root">
-    <div class="search">
-        <form action="https://www.baidu.com/baidu" class="searchForm">
-            <input name=tn type=hidden value=baidu>
-            <div class="form-group">
-                <input type=text name=word size=30 placeholder="搜索网页" title="输入搜索关键词" class="searchInput"
-                       autocomplete="off">
-                <button class="searchButton"></button>
-            </div>
+<div id="new-tab">
+    <div class="searchForm">
+        <form action="https://www.baidu.com/s" method="get">
+            <input type="text" name="wd">
+            <input type="submit" value="百度一下">
         </form>
     </div>
 </div>
 </body>
+<script>
+    const HelloVueApp = {
+        data() {
+            return {
+                message: 'Hello Vue!!'
+            }
+        }
+    }
 
+    Vue.createApp(HelloVueApp).mount('#new-tab')
+</script>
 </html>
