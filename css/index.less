@@ -8,6 +8,7 @@ body {
   font: 16px "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   background: #fff;
   -webkit-text-size-adjust: 100%;
+  min-width: 350px;
 }
 
 a {
@@ -43,11 +44,30 @@ p {
 }
 
 /*initializing css end*/
-html, body, .searchForm {
+* {
+  transition: all 0.5s;
+}
+
+html, body {
   height: 100%;
 }
 
-.searchForm {
-  display: flex;
+#new-tab {
+  height: 100%;
+  position: relative;
 
+  .searchForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+
+    .inputKey {
+      height: 40px;
+      border-radius: 50px 0px 0px 50px;
+      padding: 0 15px;
+      font-size: 24px;
+    }
+  }
 }
