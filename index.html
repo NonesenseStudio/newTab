@@ -30,8 +30,10 @@
 <div id="new-tab">
     <div class="searchForm">
         <form action="https://www.baidu.com/s" method="get">
-            <input type="text" name="wd" :placeholder="placeholder" class="inputKey">
-            <input type="submit" value="百度一下">
+            <input type="text" id="key" name="wd" :placeholder="placeholder" class="inputKey">
+            <button type="submit" class="inputButton">
+                <img src="images/search.png" alt="searchButton">
+            </button>
         </form>
     </div>
 </div>
@@ -40,14 +42,10 @@
     const VueApp = {
         data() {
             return {
-                placeholder: '请输入关键词'
+                placeholder: '搜索网页'
             }
         },
-        created() {
-            console.log("外卖红包")
-        }
     }
-
     Vue.createApp(VueApp).mount('#new-tab')
 </script>
 </html>

@@ -31,7 +31,8 @@ li {
 
 img {
   border: 0;
-  vertical-align: middle
+  vertical-align: middle;
+  pointer-events: none;
 }
 
 table {
@@ -50,6 +51,7 @@ p {
 
 html, body {
   height: 100%;
+  min-width: 350px;
 }
 
 #new-tab {
@@ -63,11 +65,34 @@ html, body {
     position: absolute;
     top: 30%;
 
+    form {
+      display: flex;
+      border-radius: 50px 50px;
+      border: 1px #000 solid;
+      width: 50%;
+    }
+
     .inputKey {
+      width: 90%;
       height: 40px;
       border-radius: 50px 0 0 50px;
       padding: 0 15px;
       font-size: 24px;
+      border: none;
+    }
+    .inputKey:focus{
+      outline: none;
+    }
+    .inputButton {
+      width: 60px;
+      border-radius: 0 50px 50px 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      img{
+        width: 50%;
+      }
     }
   }
 }
