@@ -70,6 +70,9 @@ html, body {
       border-radius: 50px 50px;
       border: 1px #000 solid;
       width: 50%;
+      @media screen and (max-width: 1023px) {
+        width: 75%;
+      }
     }
 
     .inputKey {
@@ -79,10 +82,12 @@ html, body {
       padding: 0 15px;
       font-size: 24px;
       border: none;
+
+      &:focus {
+        outline: none;
+      }
     }
-    .inputKey:focus{
-      outline: none;
-    }
+
     .inputButton {
       width: 60px;
       border-radius: 0 50px 50px 0;
@@ -90,9 +95,10 @@ html, body {
       background: none;
       cursor: pointer;
 
-      img{
+      img {
         width: 50%;
       }
     }
   }
 }
+
