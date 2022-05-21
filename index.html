@@ -30,21 +30,22 @@
 <div id="new-tab">
     <div class="searchForm">
         <form action="https://www.baidu.com/s" method="get">
-            <input type="text" name="wd">
-            <input type="submit" value="百度一下">
+            <input type="text" id="key" name="wd" :placeholder="placeholder" class="inputKey">
+            <button type="submit" class="inputButton">
+                <img src="images/search.png" alt="searchButton">
+            </button>
         </form>
     </div>
 </div>
 </body>
 <script>
-    const HelloVueApp = {
+    const VueApp = {
         data() {
             return {
-                message: 'Hello Vue!!'
+                placeholder: '搜索网页'
             }
-        }
+        },
     }
-
-    Vue.createApp(HelloVueApp).mount('#new-tab')
+    Vue.createApp(VueApp).mount('#new-tab')
 </script>
 </html>
